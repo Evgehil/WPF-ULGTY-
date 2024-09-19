@@ -86,7 +86,7 @@
         </Viewbox>
 
         <Viewbox Grid.Row="4" Grid.Column="2">
-            <Button Content="Старт"  VerticalAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold"  FontSize="15" Margin="3" Foreground="Black" Background="#54e817" BorderBrush="White" Height="32" Width="200" Style="{DynamicResource RoundCorner}" Click="ButtonWomen_Click">
+            <Button x:Name="ButtonPlay" Content="Старт"  VerticalAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold"  FontSize="15" Margin="3" Foreground="Black" Background="#54e817" BorderBrush="White" Height="32" Width="200" Style="{DynamicResource RoundCorner}" Click="ButtonPlay_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="15"/>
@@ -96,7 +96,7 @@
         </Viewbox>
 
         <Viewbox Grid.Row="4" Grid.Column="3">
-            <Button Content="Пауза"  VerticalAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold"  FontSize="15" Margin="3" Foreground="Black" Background="#e21336" BorderBrush="White" Height="32" Width="200" Style="{DynamicResource RoundCorner}" Click="ButtonWomen_Click">
+            <Button  x:Name="ButtonStop" Content="Пауза" VerticalAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold"  FontSize="15" Margin="3" Foreground="Black" Background="#e21336" BorderBrush="White" Height="32" Width="200" Style="{DynamicResource RoundCorner}" Click="ButtonStop_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="15"/>
@@ -126,8 +126,9 @@
             <TextBlock Text="Видеоролик" FontFamily="Segoe UI" FontWeight="Bold" ></TextBlock>
         </Viewbox>
 
-        <StackPanel Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Center">
-            <Slider Name="vol" Maximum="1" MinHeight="23" MinWidth="100" Value="1" LargeChange="0.1" SmallChange="0.01" />
+        <StackPanel Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3">
+            <MediaElement x:Name="Video" Source="D:\Университет\Второй курс\Третий семестр\Шамшев\LabWork02\LabWork02\Image\Video.mp4" LoadedBehavior="Manual" Margin="50,50,50,0"></MediaElement>
+            <Slider x:Name="Slider" Maximum="1" MinHeight="23" MinWidth="100" Value="1" LargeChange="0.1" SmallChange="0.01" ValueChanged="Video_ValueChanged" Margin="5,0,5,0" Visibility="Collapsed" Foreground="#d4b799"  />
         </StackPanel>
         
     </Grid>

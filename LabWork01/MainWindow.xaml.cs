@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
+using System.Security.Cryptography;
 
 namespace LabWork01
 {
@@ -76,6 +77,25 @@ namespace LabWork01
         private void ButtonNewAccount_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Новый аккаунт создан");
+        }
+
+        private void Video_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            Video.Volume = (double)Slider.Value;
+        }
+
+        private void ButtonPlay_Click(object sender, RoutedEventArgs e)
+        {
+            Video.Play();
+            if (Slider.Visibility == Visibility.Collapsed)
+            {
+                Slider.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void ButtonStop_Click(object sender, RoutedEventArgs e)
+        {
+            Video.Pause();
         }
     }
 }
