@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:LabWork01"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="Интернет магазин" Height="900 " Width="900" MinHeight="600" MinWidth="600" MaxHeight="1000" MaxWidth="1000">
+        Title="Интернет магазин" Height="850 " Width="850" MinHeight="750" MinWidth="750" MaxHeight="1000" MaxWidth="1000">
     <Grid ShowGridLines="True">
 
         <Grid.RowDefinitions>
@@ -45,19 +45,19 @@
         </Viewbox>
 
         <Viewbox Grid.Row="2" Grid.Column="0">
-            <Button x:Name="ButtonMen" Content="Муржской отдел" VerticalAlignment="Center" FontSize="15" Foreground="Black" Background="#d4b799" BorderBrush="White" Height="32" Width="200"></Button>
+            <Button x:Name="ButtonMen" Content="Муржской отдел" VerticalAlignment="Center" FontSize="15" Foreground="Black" Background="#d4b799" BorderBrush="White" Height="32" Width="200" Click="ButtonMen_Click"></Button>
         </Viewbox>
 
         <Viewbox Grid.Row="2" Grid.Column="1">
-            <Button x:Name="ButtonWomen" Content="Женский отдел"  VerticalAlignment="Center"  FontSize="15" Margin="3" Foreground="Black" Background="#d4b799" BorderBrush="White" Height="32" Width="200"></Button>
+            <Button x:Name="ButtonWomen" Content="Женский отдел"  VerticalAlignment="Center"  FontSize="15" Margin="3" Foreground="Black" Background="#d4b799" BorderBrush="White" Height="32" Width="200" Click="ButtonWomen_Click"></Button>
         </Viewbox>
 
         <Viewbox Grid.Row="4" Grid.Column="0">
-            <Button x:Name="ButtonChild" Content="Детский отдел"  VerticalAlignment="Center"  FontSize="15" Foreground="Black" Background="#d4b799" BorderBrush="White" Height="32" Width="200" Style="{DynamicResource RoundCorner}"></Button>
+            <Button x:Name="ButtonChild" Content="Детский отдел"  VerticalAlignment="Center"  FontSize="15" Foreground="Black" Background="#d4b799" BorderBrush="White" Height="32" Width="200" Style="{DynamicResource RoundCorner}" Click="ButtonChild_Click"></Button>
         </Viewbox>
 
         <Viewbox Grid.Row="4" Grid.Column="1">
-            <Button x:Name="ButtonSport" Content="Спортивный инвентарь"  VerticalAlignment="Center"  FontSize="15" Foreground="Black" Background="#d4b799" BorderBrush="White"></Button>
+            <Button x:Name="ButtonSport" Content="Спортивный инвентарь"  VerticalAlignment="Center"  FontSize="15" Foreground="Black" Background="#d4b799" BorderBrush="White" Click="ButtonSport_Click"></Button>
         </Viewbox>
 
         <Viewbox Grid.Row="4" Grid.Column="2">
@@ -68,7 +68,8 @@
             <Button Content="Пауза"  VerticalAlignment="Center"  FontSize="15" Margin="3" Foreground="Black" Background="#ff0008" BorderBrush="White" Height="32" Width="200"></Button>
         </Viewbox>
 
-        <Border Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="38,0,15,0" Background="Gray" Padding="10" CornerRadius="30" VerticalAlignment="Center" Height="273">
+        
+        <Border Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="30,0,15,30" Background="Gray" Padding="10" CornerRadius="30" VerticalAlignment="Center" Height="273">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="10" Color="LightBlue" ShadowDepth="5"></DropShadowEffect>
             </Border.Effect>
@@ -78,8 +79,8 @@
                 <PasswordBox materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin ="0,20,0,0"></PasswordBox>
                 <PasswordBox materialDesign:HintAssist.Hint="Повторите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin ="0,20,0,0"></PasswordBox>
                 <Grid>
-                    <Button x:Name="ButtonDelete" Content="Забыли пароль"  Margin="10,30,0,0" HorizontalAlignment="Left"  FontSize="10" Foreground="Black" Background="White" BorderBrush="White" Height="20" Width="150"></Button>
-                    <Button x:Name="ButtonNewAccount" Content="Новый аккаунт"  Margin="0,30,10,0" HorizontalAlignment="Right"  FontSize="10" Foreground="Black" Background="White" BorderBrush="White" Height="20" Width="150"></Button>
+                    <Button x:Name="ButtonForget" Content="Забыли пароль"  Margin="10,30,0,0" HorizontalAlignment="Left"  FontSize="10" Foreground="Black" Background="White" BorderBrush="White" Height="20" Width="150" Click="ButtonForget_Click"></Button>
+                    <Button x:Name="ButtonNewAccount" Content="Новый аккаунт"  Margin="0,30,10,0" HorizontalAlignment="Right"  FontSize="10" Foreground="Black" Background="White" BorderBrush="White" Height="20" Width="150" Click="ButtonNewAccount_Click"></Button>
                 </Grid>
             </StackPanel>
         </Border>

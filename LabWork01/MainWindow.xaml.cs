@@ -24,5 +24,35 @@ namespace LabWork01
         {
             InitializeComponent();
         }
+
+        private void ButtonMen_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Муржской отдел");
+        }
+
+        private void ButtonWomen_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Женский отдел");
+        }
+
+        private void ButtonChild_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Детский отдел");
+        }
+
+        private void ButtonSport_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Отдел спортивного снаряжения");
+        }
+
+        private void ButtonForget_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Аккаунт удален");
+        }
+
+        private void ButtonNewAccount_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Новый аккаунт создан");
+        }
     }
 }
