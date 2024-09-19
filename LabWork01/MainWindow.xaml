@@ -60,6 +60,14 @@
             <Button x:Name="ButtonSport" Content="Спортивный инвентарь"  VerticalAlignment="Center"  FontSize="15" Foreground="Black" Background="#d4b799" BorderBrush="White"></Button>
         </Viewbox>
 
+        <Viewbox Grid.Row="4" Grid.Column="2">
+            <Button Content="Старт"  VerticalAlignment="Center"  FontSize="15" Margin="3" Foreground="Black" Background="#54e817" BorderBrush="White" Height="32" Width="200"></Button>
+        </Viewbox>
+
+        <Viewbox Grid.Row="4" Grid.Column="3">
+            <Button Content="Пауза"  VerticalAlignment="Center"  FontSize="15" Margin="3" Foreground="Black" Background="#ff0008" BorderBrush="White" Height="32" Width="200"></Button>
+        </Viewbox>
+
         <Border Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="38,0,15,0" Background="Gray" Padding="10" CornerRadius="30" VerticalAlignment="Center" Height="273">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="10" Color="LightBlue" ShadowDepth="5"></DropShadowEffect>
