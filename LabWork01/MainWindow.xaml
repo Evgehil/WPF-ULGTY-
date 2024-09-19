@@ -25,7 +25,7 @@
         </Grid.ColumnDefinitions>
 
         <Viewbox Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="5">
-            <TextBlock x:Name="TopText" Text="Спортивный магазин 'Спортик'" VerticalAlignment="Center" FontSize="100"></TextBlock>
+            <TextBlock x:Name="TopText" Text="Спортивный магазин 'Спортик'" FontFamily= "Impact" FontStyle="Normal" Foreground="#92682d" VerticalAlignment="Center" FontSize="100"></TextBlock>
         </Viewbox>
 
         <Viewbox Grid.Row="1" Grid.Column="0">
@@ -45,48 +45,84 @@
         </Viewbox>
 
         <Viewbox Grid.Row="2" Grid.Column="0">
-            <Button x:Name="ButtonMen" Content="Муржской отдел" VerticalAlignment="Center" FontSize="15" Foreground="Black" Background="#d4b799" BorderBrush="White" Height="32" Width="200" Click="ButtonMen_Click"></Button>
+            <Button x:Name="ButtonMen" Content="Муржской отдел" FontFamily="Segoe UI" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="Black" Background="#d4b799" BorderBrush="White" Height="32" Width="200" Style="{DynamicResource RoundCorner}" Click="ButtonMen_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </Viewbox>
 
         <Viewbox Grid.Row="2" Grid.Column="1">
-            <Button x:Name="ButtonWomen" Content="Женский отдел"  VerticalAlignment="Center"  FontSize="15" Margin="3" Foreground="Black" Background="#d4b799" BorderBrush="White" Height="32" Width="200" Click="ButtonWomen_Click"></Button>
+            <Button x:Name="ButtonWomen" Content="Женский отдел" FontFamily="Segoe UI" FontWeight="Bold" VerticalAlignment="Center"  FontSize="15" Margin="3" Foreground="Black" Background="#d4b799" BorderBrush="White" Height="32" Width="200" Style="{DynamicResource RoundCorner}" Click="ButtonWomen_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </Viewbox>
 
         <Viewbox Grid.Row="4" Grid.Column="0">
-            <Button x:Name="ButtonChild" Content="Детский отдел"  VerticalAlignment="Center"  FontSize="15" Foreground="Black" Background="#d4b799" BorderBrush="White" Height="32" Width="200" Style="{DynamicResource RoundCorner}" Click="ButtonChild_Click"></Button>
+            <Button x:Name="ButtonChild" Content="Детский отдел" FontFamily="Segoe UI" FontWeight="Bold" VerticalAlignment="Center"  FontSize="15" Foreground="Black" Background="#d4b799" BorderBrush="White" Height="32" Width="200" Style="{DynamicResource RoundCorner}" Click="ButtonChild_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </Viewbox>
 
         <Viewbox Grid.Row="4" Grid.Column="1">
-            <Button x:Name="ButtonSport" Content="Спортивный инвентарь"  VerticalAlignment="Center"  FontSize="15" Foreground="Black" Background="#d4b799" BorderBrush="White" Click="ButtonSport_Click"></Button>
+            <Button x:Name="ButtonSport" Content="Спортивный инвентарь" FontFamily="Segoe UI" FontWeight="Bold"  VerticalAlignment="Center"  FontSize="15" Foreground="Black" Background="#d4b799" BorderBrush="White" Height="32" Width="200" Style="{DynamicResource RoundCorner}" Click="ButtonSport_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </Viewbox>
 
         <Viewbox Grid.Row="4" Grid.Column="2">
-            <Button Content="Старт"  VerticalAlignment="Center"  FontSize="15" Margin="3" Foreground="Black" Background="#54e817" BorderBrush="White" Height="32" Width="200"></Button>
+            <Button Content="Старт"  VerticalAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold"  FontSize="15" Margin="3" Foreground="Black" Background="#54e817" BorderBrush="White" Height="32" Width="200" Style="{DynamicResource RoundCorner}" Click="ButtonWomen_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </Viewbox>
 
         <Viewbox Grid.Row="4" Grid.Column="3">
-            <Button Content="Пауза"  VerticalAlignment="Center"  FontSize="15" Margin="3" Foreground="Black" Background="#ff0008" BorderBrush="White" Height="32" Width="200"></Button>
+            <Button Content="Пауза"  VerticalAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold"  FontSize="15" Margin="3" Foreground="Black" Background="#e21336" BorderBrush="White" Height="32" Width="200" Style="{DynamicResource RoundCorner}" Click="ButtonWomen_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </Viewbox>
 
-        
+
         <Border Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="30,0,15,30" Background="Gray" Padding="10" CornerRadius="30" VerticalAlignment="Center" Height="273">
             <Border.Effect>
-                <DropShadowEffect BlurRadius="10" Color="LightBlue" ShadowDepth="5"></DropShadowEffect>
+                <DropShadowEffect BlurRadius="10" Color="#b48041" ShadowDepth="5"></DropShadowEffect>
             </Border.Effect>
             <StackPanel>
-                <TextBlock Text="Авторизация" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" ></TextBlock>
+                <TextBlock Text="Авторизация" VerticalAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold" HorizontalAlignment="Center" FontSize="20" ></TextBlock>
                 <TextBox materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin ="0,20,0,0"></TextBox>
                 <PasswordBox materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin ="0,20,0,0"></PasswordBox>
                 <PasswordBox materialDesign:HintAssist.Hint="Повторите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin ="0,20,0,0"></PasswordBox>
                 <Grid>
-                    <Button x:Name="ButtonForget" Content="Забыли пароль"  Margin="10,30,0,0" HorizontalAlignment="Left"  FontSize="10" Foreground="Black" Background="White" BorderBrush="White" Height="20" Width="150" Click="ButtonForget_Click"></Button>
-                    <Button x:Name="ButtonNewAccount" Content="Новый аккаунт"  Margin="0,30,10,0" HorizontalAlignment="Right"  FontSize="10" Foreground="Black" Background="White" BorderBrush="White" Height="20" Width="150" Click="ButtonNewAccount_Click"></Button>
+                    <Button x:Name="ButtonForget" Content="Забыли пароль" FontFamily="Segoe UI" FontWeight="Bold" Margin="10,30,0,0" HorizontalAlignment="Left"  FontSize="10" Foreground="Black" Background="White" BorderBrush="White" Height="20" Width="150" Click="ButtonForget_Click"></Button>
+                    <Button x:Name="ButtonNewAccount" Content="Новый аккаунт" FontFamily="Segoe UI" FontWeight="Bold"  Margin="0,30,10,0" HorizontalAlignment="Right"  FontSize="10" Foreground="Black" Background="White" BorderBrush="White" Height="20" Width="150" Click="ButtonNewAccount_Click"></Button>
                 </Grid>
             </StackPanel>
         </Border>
 
         <Viewbox Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3">
-            <TextBlock Text="Видеоролик"></TextBlock>
+            <TextBlock Text="Видеоролик" FontFamily="Segoe UI" FontWeight="Bold" ></TextBlock>
         </Viewbox>
 
         <StackPanel Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Center">
