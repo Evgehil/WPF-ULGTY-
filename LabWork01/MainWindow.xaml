@@ -50,6 +50,7 @@
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="15"/>
                     </Style>
+                    
                 </Button.Resources>
             </Button>
         </Viewbox>
