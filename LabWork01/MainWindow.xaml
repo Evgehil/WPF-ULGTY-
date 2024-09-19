@@ -85,7 +85,7 @@
         </Viewbox>
 
         <Viewbox Grid.Row="4" Grid.Column="2">
-            <Button Content="Старт"  VerticalAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold"  FontSize="15" Margin="3" Foreground="Black" Background="#54e817" BorderBrush="White" Height="32" Width="200" Style="{DynamicResource RoundCorner}" Click="ButtonWomen_Click">
+            <Button Content="Старт"  VerticalAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold"  FontSize="15" Margin="3" Foreground="Black" Background="#54e817" BorderBrush="White" Height="32" Width="200" Style="{DynamicResource RoundCorner}">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="15"/>
@@ -95,7 +95,7 @@
         </Viewbox>
 
         <Viewbox Grid.Row="4" Grid.Column="3">
-            <Button Content="Пауза"  VerticalAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold"  FontSize="15" Margin="3" Foreground="Black" Background="#e21336" BorderBrush="White" Height="32" Width="200" Style="{DynamicResource RoundCorner}" Click="ButtonWomen_Click">
+            <Button Content="Пауза"  VerticalAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold"  FontSize="15" Margin="3" Foreground="Black" Background="#e21336" BorderBrush="White" Height="32" Width="200" Style="{DynamicResource RoundCorner}">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="15"/>
