@@ -146,7 +146,14 @@
         </Border>
 
         <Viewbox Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3">
-            <TextBlock Text="Видеоролик" FontFamily="Segoe UI" FontWeight="Bold" ></TextBlock>
+            <TextBlock Text="Видеоролик" FontFamily="Segoe UI" FontWeight="Bold">
+                <TextBlock.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#b48041" Offset="0.0"/>
+                        <GradientStop Color="#c2ae3d" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
         </Viewbox>
 
         <StackPanel Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Center">
