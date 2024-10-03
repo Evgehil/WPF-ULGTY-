@@ -7,6 +7,30 @@
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="Интернет магазин" Height="850 " Width="850" MinHeight="750" MinWidth="750" MaxHeight="1000" MaxWidth="1000">
+
+    <Window.Resources>
+    <Style x:Key="ButtonStart" TargetType="Button">
+        <Setter Property="Background" Value="#54e817"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="BorderBrush" Value="White"/>
+        <Setter Property="FontSize" Value="15"/>
+    </Style>
+
+    <Style TargetType="Button">
+        <Setter Property="Background" Value="#e8a227"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="BorderBrush" Value="White"/>
+        <Setter Property="FontSize" Value="15"/>
+    </Style>
+
+    <Style x:Key="ButtonStop" TargetType="Button">
+        <Setter Property="Background" Value="#ff0008"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="BorderBrush" Value="White"/>
+        <Setter Property="FontSize" Value="15"/>
+    </Style>
+
+    </Window.Resources>
     <Grid ShowGridLines="True">
 
         <Grid.RowDefinitions>
@@ -85,7 +109,7 @@
         </Viewbox>
 
         <Viewbox Grid.Row="4" Grid.Column="2">
-            <Button Content="Старт"  VerticalAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold"  FontSize="15" Margin="3" Foreground="Black" Background="#54e817" BorderBrush="White" Height="32" Width="200" Style="{DynamicResource RoundCorner}">
+            <Button Content="Старт" VerticalAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold"  FontSize="15" Margin="3" Foreground="Black" Background="#54e817" BorderBrush="White" Height="32" Width="200" Style="{DynamicResource RoundCorner}">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="15"/>
