@@ -8,31 +8,66 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="Интернет магазин" Height="850 " Width="850" MinHeight="750" MinWidth="750" MaxHeight="1000" MaxWidth="1000">
     <Window.Resources>
-    <Style x:Key="ButtonStart" TargetType="Button">
-        <Setter Property="Background" Value="#54e817"/>
-        <Setter Property="Foreground" Value="Black"/>
-        <Setter Property="BorderBrush" Value="White"/>
-        <Setter Property="FontSize" Value="15"/>
-    </Style>
+        <Style x:Key="ButtonStart" TargetType="Button">
+            <Setter Property="Background" Value="#54e817"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
 
-    <Style TargetType="Button">
-        <Setter Property="Background" Value="#e8a227"/>
-        <Setter Property="Foreground" Value="Black"/>
-        <Setter Property="BorderBrush" Value="White"/>
-        <Setter Property="FontSize" Value="15"/>
-    </Style>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#e8a227"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
 
-    <Style x:Key="ButtonStop" TargetType="Button">
-        <Setter Property="Background" Value="#ff0008"/>
-        <Setter Property="Foreground" Value="Black"/>
-        <Setter Property="BorderBrush" Value="White"/>
-        <Setter Property="FontSize" Value="15"/>
-    </Style>
+        <Style x:Key="ButtonStop" TargetType="Button">
+            <Setter Property="Background" Value="#ff0008"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
+
+        <Storyboard x:Key="ButtonAnimationStoryboard">
+            <DoubleAnimation 
+                Storyboard.TargetName="ButtonMen" 
+                Storyboard.TargetProperty="Width" 
+                From="0" To="200" Duration="0:0:5" />
+            <DoubleAnimation 
+                Storyboard.TargetName="ButtonWomen" 
+                Storyboard.TargetProperty="Width" 
+                From="0" To="200" Duration="0:0:5" />
+            <DoubleAnimation 
+                Storyboard.TargetName="ButtonChild" 
+                Storyboard.TargetProperty="Width" 
+                From="0" To="200" Duration="0:0:5" />
+            <DoubleAnimation 
+                Storyboard.TargetName="ButtonSport" 
+                Storyboard.TargetProperty="Width" 
+                From="0" To="200" Duration="0:0:5" />
+            <DoubleAnimation 
+                Storyboard.TargetName="ButtonForget"
+                Storyboard.TargetProperty="Width"
+                From="110" To="200" Duration="0:0:2"
+                AutoReverse="True" RepeatBehavior="Forever"/>
+            <DoubleAnimation 
+                Storyboard.TargetName="ButtonNewAccount"
+                Storyboard.TargetProperty="Width"
+                From="200" To="110" Duration="0:0:2"
+                AutoReverse="True" RepeatBehavior="Forever"/>
+        </Storyboard>
 
     </Window.Resources>
     
     <Grid ShowGridLines="True">
 
+        <Grid.Triggers>
+            <EventTrigger RoutedEvent="Window.Loaded">
+                <BeginStoryboard Storyboard="{StaticResource ButtonAnimationStoryboard}"/>
+            </EventTrigger>
+        </Grid.Triggers>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="40*"/>
             <RowDefinition Height="200*"/>
